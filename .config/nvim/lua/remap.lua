@@ -11,7 +11,7 @@ vim.keymap.set("n", "<leader>b", ":bn<CR>")
 -- Copy to system clipboard
 vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
-vim.keymap.set("v", "<leader>p", [["+p]])
+vim.keymap.set("n", "<leader>p", [["+p]])
 
 -- Delete without replacing default clipboard
 vim.keymap.set({"n", "v"}, "<leader>d", [["_d]])
