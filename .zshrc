@@ -110,3 +110,6 @@ export PATH="$PATH:/opt/nvim-linux64/bin"
 alias vi=nvim
 alias vim=nvim
 
+# Make Neovim the default text editor
+export EDITOR="/opt/nvim-linux64/bin"
+
