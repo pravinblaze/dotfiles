@@ -113,3 +113,6 @@ alias vim=nvim
 # Make Neovim the default text editor
 export EDITOR="/opt/nvim-linux64/bin"
 
+# fzf integration
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
