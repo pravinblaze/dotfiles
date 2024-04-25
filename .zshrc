@@ -116,3 +116,6 @@ export EDITOR="/opt/nvim-linux64/bin"
 # fzf integration
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+# Add node path
+export PATH="$PATH:/opt/node-v20.12.2-linux-x64/bin"
+
