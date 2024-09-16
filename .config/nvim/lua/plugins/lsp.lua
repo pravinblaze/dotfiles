@@ -9,7 +9,7 @@ return {
     "williamboman/mason-lspconfig.nvim",
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = { "lua_ls", "rust_analyzer", "pyright", "clangd", "bashls", "tsserver" },
+        ensure_installed = { "lua_ls", "rust_analyzer", "pyright", "clangd", "bashls", "ts_ls" },
       })
     end,
   },
@@ -23,7 +23,7 @@ return {
       lspconfig.rust_analyzer.setup({ capabilities = capabilities })
       lspconfig.pyright.setup({ capabilities = capabilities })
       lspconfig.clangd.setup({ capabilities = capabilities })
-      lspconfig.tsserver.setup({ capabilities = capabilities })
+      lspconfig.ts_ls.setup({ capabilities = capabilities })
       lspconfig.bashls.setup({ capabilities = capabilities })
 
       -- Global mappings.
