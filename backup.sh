@@ -9,4 +9,6 @@ mkdir -p ./.config/tmux/
 cp ~/.config/tmux/tmux.conf ./.config/tmux/
 # mkdir -p ./.config/alacritty/
 # cp -r ~/.config/alacritty ./.config
+mkdir -p ./.local/
+cp -r ~/.local/scripts/ ./.local/
 
