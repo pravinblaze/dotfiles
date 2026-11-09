@@ -1,5 +1,13 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
+typeset -U path
+case ":$PATH:" in
+  *":$HOME/.local/bin:"*) ;;
+  *) path=("$HOME/.local/bin" "${path[@]}") ;;
+esac
+path=("$HOME/bin" "$HOME/.local/scripts" /usr/local/bin "${path[@]}")
+if [[ $OSTYPE == darwin* && -d /opt/homebrew/bin ]]; then
+  path=(/opt/homebrew/bin "${path[@]}")
+fi
 
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -108,7 +116,9 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Neovim path
-export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
+if [[ $OSTYPE == linux* && -d /opt/nvim-linux-x86_64/bin ]]; then
+  path+=(/opt/nvim-linux-x86_64/bin)
+fi
 
 # Tmux clear
 alias tclear='clear && printf "\033[3J"'
